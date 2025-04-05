@@ -1,0 +1,75 @@
+{
+  "name": "vandapardakht-wallet-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.24.1",
+    "@hookform/resolvers": "^3.9.1",
+    "@radix-ui/react-label": "^2.1.2",
+    "@reduxjs/toolkit": "^2.2.2",
+    "@tabler/icons-react": "^3.31.0",
+    "@tanstack/react-query": "^5.60.6",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.8",
+    "clsx": "^2.1.1",
+    "jalaali-js": "^1.2.7",
+    "jalali-moment": "^3.3.11",
+    "js-cookie": "^3.0.5",
+    "js-cookies": "^1.0.4",
+    "luxon": "^3.4.4",
+    "moment-jalaali": "^0.10.4",
+    "motion": "^12.6.3",
+    "persian-number": "^1.6.0",
+    "rc-slider": "^10.6.2",
+    "react": "^18.2.0",
+    "react-cookie": "^7.1.4",
+    "react-countup": "^6.5.3",
+    "react-custom-checkbox": "^3.2.0",
+    "react-date-object": "^2.1.8",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.53.2",
+    "react-multi-date-picker": "^4.5.2",
+    "react-notifications": "^1.7.4",
+    "react-number-format": "^4.9.4",
+    "react-redux": "^9.1.0",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.9.0",
+    "react-toastify": "^10.0.6",
+    "reactjs-popup": "^2.0.6",
+    "tailwind-merge": "^2.6.0",
+    "web-vitals": "^2.1.4",
+    "zaman": "^2.1.1",
+    "zod": "^3.23.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "react-inject-env": "^2.1.0",
+    "tailwindcss": "^3.4.3"
+  }
+}

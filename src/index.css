@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+
+  background: radial-gradient(
+    circle,
+    rgba(0, 133, 255, 1) 0%,
+    rgba(0, 52, 101, 1) 100%
+  );
+}
+
+.glass-effect{
+  background: rgba(39, 7, 7, 0.3);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(55px);
+-webkit-backdrop-filter: blur(25px);
+
+}
