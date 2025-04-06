@@ -1,5 +1,5 @@
 import React from 'react'
-import { PassnagerForm } from '../components/PassnagerForm'
+import PassnagerForm from '../components/PassnagerForm'
 
 const Pasanger = () => {
   return (

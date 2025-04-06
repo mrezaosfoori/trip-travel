@@ -6,11 +6,12 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { QueryProvider } from "./lib/queries/QueryProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-
+    <QueryProvider>
       <App />
 
       <ToastContainer
@@ -22,7 +23,7 @@ root.render(
         position="top-right"
         autoClose={2000}
       />
-   
+    </QueryProvider>
   </BrowserRouter>
 );
 
