@@ -132,5 +132,11 @@ backdrop-filter: blur(55px);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
+
+.custom-steps .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: orange !important;
+  border-color: orange !important;
+  color: #fff;
+}
  
 

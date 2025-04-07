@@ -11613,3 +11613,11 @@ export const cities=[
       "county_id": 1300007
     }
   ]
+
+  export const vehicles = [
+    { title: "Sedan", image: "/images/sedan.jpg" },
+    { title: "SUV", image: "/images/suv.jpg" },
+    { title: "Convertible", image: "/images/convertible.jpg" },
+    { title: "Minivan", image: "/images/minivan.jpg" },
+    { title: "Truck", image: "/images/truck.jpg" },
+  ];
