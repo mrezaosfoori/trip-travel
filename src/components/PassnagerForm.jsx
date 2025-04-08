@@ -4,6 +4,7 @@ import { cities, vehicles } from "./../lib/data/index";
 import CustomSelect from "./ui/select";
 import CustomDate from "./ui/date";
 import VehicleSelector from "./ui/vehicle";
+import { useNavigate } from "react-router-dom";
 
 // Step 1 Component: Select Location and Destination
 const StepOne = ({ control }) => (
@@ -22,13 +23,13 @@ const StepTwo = ({ control }) => (
 );
 const StepThree = ({ control }) => (
   <div className="flex gap-4">
-  <VehicleSelector control={control} name="vehicles" vehicles={vehicles} />
+    <VehicleSelector control={control} name="vehicles" vehicles={vehicles} />
   </div>
 );
 
-const PassengerForm = ({currentStep,setCurrentStep}) => {
+const PassengerForm = ({ currentStep, setCurrentStep }) => {
+  const navigate=useNavigate()
   // Local state to track the current step
-  
 
   const { watch, control } = useForm({
     defaultValues: {
@@ -36,9 +37,10 @@ const PassengerForm = ({currentStep,setCurrentStep}) => {
       destination: "",
       start_time: "",
       end_time: "",
+      vehicles: [],
     },
   });
-
+  console.log(watch("vehicles"));
   // Watch location and destination fields
   useEffect(() => {
     const subscription = watch((values) => {
@@ -53,12 +55,18 @@ const PassengerForm = ({currentStep,setCurrentStep}) => {
     return () => subscription.unsubscribe();
   }, [watch, currentStep]);
 
+  const buttonIsVisible=currentStep === 2 && watch("vehicles").length
 
   return (
-    <div>
+    <div className=" flex flex-col gap-6 p-4 ">
       {currentStep === 0 && <StepOne control={control} />}
       {currentStep === 1 && <StepTwo control={control} />}
       {currentStep === 2 && <StepThree control={control} />}
+    
+        <button onClick={()=>navigate("/drives")} className={`${buttonIsVisible?"opacity-80":"opacity-10 cursor-not-allowed"} transition-all delay-300 bg-orange-500 px-4 py-2 text-white rounded-md text-[18px] font-bold`}>
+          search the cars
+        </button>
+ 
       {/* Optionally, you can add navigation buttons to go back/forward */}
     </div>
   );
