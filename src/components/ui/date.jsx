@@ -34,9 +34,13 @@ const DateInput = (props) => {
               containerStyle={{ width: "100%" }}
               calendar={persian}
               locale={persian_fa}
+              value={value}
               calendarPosition="top-right"
               placeholder={placeholder}
-              onChange={(date) => {onChange(date)}}
+              onFocusedDateChange={(date) => {
+                console.log(date,"date.unix")
+                onChange(date.unix)
+              }}
             />
           )}
         />

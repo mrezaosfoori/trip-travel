@@ -166,33 +166,32 @@ const DriverList = () => {
 
       {/* List of driver cards */}
       {currentDrivers.map((driver) => (
-        <div key={driver.id} className="bg-slate-400 my-2 p-4 rounded-md flex gap-8 ">
-          <div className="flex-1">
-            <h3>{driver.driverName}'s Ride</h3>
-            <p>
-              <strong>Car Type:</strong> {driver.carType} |{" "}
-              <strong>Car Name:</strong> {driver.carName} |{" "}
-              <strong>Car Model:</strong> {driver.carModel}
-            </p>
-            <p>
-              <strong>From:</strong> {driver.location} | <strong>To:</strong>{" "}
-              {driver.destination}
-            </p>
-            <p>
-              <strong>Start Date:</strong> {driver.startDate} |{" "}
-              <strong>Arrival Time:</strong> {driver.arrivalTime}
-            </p>
-
-            <div style={styles.seatsContainer}>
-              <p>
-                <strong>Car Layout:</strong>
-              </p>
-              <CarGraphic seats={driver.seats} />
+        <div
+          key={driver.id}
+          className="bg-slate-400 my-2 p-4 rounded-md flex flex-col gap-4 "
+        >
+          <h3>{driver.driverName}'s Ride</h3>
+          <div className="flex-1 flex justify-between">
+            <CarGraphic seats={driver.seats} />
+            <img src={images.carLogo} alt="" className="w-[150px] h-[90px]" />
+          </div>
+          <div className="flex bg-orange-500 bg-opacity-15 items-center ">
+            <div className="flex flex-col p-4 ">
+              {" "}
+              <p>{driver.location}</p>
+              <p>{driver.startDate}</p>
+            </div>
+            <div className="flex-1 bg-orange-500 h-2 rounded-full"></div>
+            <div className="flex flex-col p-4 ">
+              <p>{driver.destination}</p>
+              <p>{driver.arrivalTime}</p>
             </div>
           </div>
-          <div className="flex-1">
-            <img src={images.carLogo} alt="" className="w-full h-full" />
-          </div>
+          <p>
+            <strong>Car Type:</strong> {driver.carType} |{" "}
+            <strong>Car Name:</strong> {driver.carName} |{" "}
+            <strong>Car Model:</strong> {driver.carModel}
+          </p>
         </div>
       ))}
 

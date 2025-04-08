@@ -18,7 +18,7 @@ const StepOne = ({ control }) => (
 const StepTwo = ({ control }) => (
   <div className="flex gap-4">
     <CustomDate control={control} label="start_time" />
-    <CustomDate control={control} label="end_time" />
+  
   </div>
 );
 const StepThree = ({ control }) => (
@@ -27,7 +27,7 @@ const StepThree = ({ control }) => (
   </div>
 );
 
-const PassengerForm = ({ currentStep, setCurrentStep }) => {
+const DriverForm = ({ currentStep, setCurrentStep }) => {
   const navigate=useNavigate()
   // Local state to track the current step
 
@@ -74,4 +74,4 @@ const PassengerForm = ({ currentStep, setCurrentStep }) => {
   );
 };
 
-export default PassengerForm;
+export default DriverForm;

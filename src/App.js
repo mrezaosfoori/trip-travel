@@ -3,6 +3,7 @@ import HeroPage from "../src/pages/Hero";
 import Pasanger from "../src/pages/Pasanger";
 import Drives from "../src/pages/Drives";
 import HomeLayout from "./components/HomeLayout";
+import Driver from "./pages/Driver";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <Route element={<HomeLayout />} >
        <Route path="/" element={<HeroPage />} />
        <Route path="/passngers" element={<Pasanger />} />
+       <Route path="/driver" element={<Driver />} />
       
      </Route >
      <Route path="/drives" element={<Drives />} />

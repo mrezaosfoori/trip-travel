@@ -9,16 +9,18 @@ const Hero = () => {
         Get your shared trip, fast ...{" "}
       </p>
 
-      <div className="flex flex-col items-center gap-4 ">
+      <div className="flex flex-col items-center gap-4 w-full px-4 ">
         <p className="text-[18px] text-white">login as</p>
-        <div className="flex gap-1">
+        <div className="flex gap-4 w-full b">
           <button
             onClick={() => navigate("/passngers")}
-            className="bg-orange-700 px-6 py-4 text-[26px] rounded-md text-white min-w-[200px] cursor-pointer hover:bg-orange-500"
+            className="bg-orange-700 flex-1 px-6 py-4 text-[26px] rounded-md text-white  cursor-pointer hover:bg-orange-500"
           >
             passanger
           </button>
-          <button className="bg-orange-700 px-6 py-4 text-[26px] rounded-md text-white min-w-[200px] cursor-pointer hover:bg-orange-500">
+          <button
+            onClick={() => navigate("/driver")}
+           className="bg-orange-700 flex-1 px-6 py-4 text-[26px] rounded-md text-white  cursor-pointer hover:bg-orange-500">
             driver
           </button>
         </div>

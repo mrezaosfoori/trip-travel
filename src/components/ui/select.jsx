@@ -11,10 +11,10 @@ const CustomSelect = ({ options, label, control }) => {
         name={label}
         render={({ field: { onChange, onBlur, value, disabled } }) => (
           <Select
-            className="min-w-[200px] "
+            className="min-w-[150px] "
             value={value}
             showSearch
-            style={{ width: 200 }}
+            style={{ width: 150 }}
             placeholder="..."
             optionFilterProp="value"
             onSelect={(e) => { onChange(e)}}
