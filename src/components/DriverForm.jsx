@@ -5,6 +5,7 @@ import CustomSelect from "./ui/select";
 import CustomDate from "./ui/date";
 import VehicleSelector from "./ui/vehicle";
 import { useNavigate } from "react-router-dom";
+import PriceSeat from "./ui/price-seat";
 
 // Step 1 Component: Select Location and Destination
 const StepOne = ({ control }) => (
@@ -24,6 +25,11 @@ const StepTwo = ({ control }) => (
 const StepThree = ({ control }) => (
   <div className="flex gap-4">
     <VehicleSelector control={control} name="vehicles" vehicles={vehicles} />
+  </div>
+);
+const StepFour = ({ control }) => (
+  <div className="flex gap-4">
+    <PriceSeat control={control} name="price-seat"  />
   </div>
 );
 
@@ -61,9 +67,10 @@ const DriverForm = ({ currentStep, setCurrentStep }) => {
 
   return (
     <div className=" flex flex-col gap-6 p-4 w-full  items-center ">
-      {currentStep === 0 && <StepOne control={control} />}
+      {/* {currentStep === 0 && <StepOne control={control} />} */}
       {currentStep === 1 && <StepTwo control={control} />}
       {currentStep === 2 && <StepThree control={control} />}
+      {currentStep === 0 && <StepFour control={control} />}
     
         <button onClick={()=>navigate("/drives")} className={`${buttonIsVisible?"opacity-80":"opacity-10 cursor-not-allowed"} transition-all delay-300 bg-orange-500 px-4 py-2 text-white rounded-md text-[18px] font-bold`}>
           search the cars
